@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "coaches_list",
+  "info": {
+    "singularName": "coach-list",
+    "pluralName": "coaches-list",
+    "displayName": "Coach List"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "repeatable": false,
+      "component": "dynamic.carousel"
+    }
+  }
+}

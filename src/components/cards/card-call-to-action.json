@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_cards_card_call_to_actions",
+  "info": {
+    "displayName": "card call to action"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "highlight": {
+      "type": "boolean"
+    },
+    "action": {
+      "type": "string"
+    },
+    "footer": {
+      "type": "string"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.link"
+    }
+  }
+}

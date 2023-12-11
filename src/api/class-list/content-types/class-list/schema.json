@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "class_lists",
+  "info": {
+    "singularName": "class-list",
+    "pluralName": "class-lists",
+    "displayName": "Class List",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "repeatable": false,
+      "component": "dynamic.carousel"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    }
+  }
+}

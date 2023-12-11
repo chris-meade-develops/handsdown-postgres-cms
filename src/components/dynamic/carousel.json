@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_dynamic_carousels",
+  "info": {
+    "displayName": "Carousel",
+    "icon": "play"
+  },
+  "options": {},
+  "attributes": {
+    "displayButtons": {
+      "type": "boolean",
+      "default": false
+    },
+    "displayDots": {
+      "type": "boolean",
+      "default": false
+    },
+    "selectableChildren": {
+      "type": "boolean",
+      "default": false
+    },
+    "reverseColours": {
+      "type": "boolean",
+      "default": false
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "cards.card-with-image"
+    },
+    "dataType" : {
+      "type": "string",
+      "default": "carousel"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_basic_text_segments",
+  "info": {
+    "displayName": "Text Segment",
+    "icon": "pencil"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

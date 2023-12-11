@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_cards_card_with_images",
+  "info": {
+    "displayName": "Card with image",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "imgPosition": {
+      "type": "string"
+    },
+    "reverse": {
+      "type": "boolean",
+      "default": false
+    },
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.image"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.link"
+    }
+  }
+}

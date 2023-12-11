@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_basic_question",
+  "info": {
+    "displayName": "Question",
+    "icon": "question",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "text"
+    },
+    "answer": {
+      "type": "text"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.link"
+    }
+  }
+}

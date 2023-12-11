@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_cards_pricing_cards",
+  "info": {
+    "displayName": "Pricing Cards",
+    "icon": "database"
+  },
+  "options": {},
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "cards.card-call-to-action"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.link"
+    }
+  }
+}

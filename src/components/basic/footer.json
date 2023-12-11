@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_basic_footers",
+  "info": {
+    "displayName": "Footer",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "location": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "telephone": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_intros_meet_the_founders",
+  "info": {
+    "displayName": "Meet the founders",
+    "icon": "feather"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Founders": {
+      "type": "component",
+      "repeatable": true,
+      "component": "intros.founder",
+      "max": 2,
+      "min": 2
+    }
+  }
+}

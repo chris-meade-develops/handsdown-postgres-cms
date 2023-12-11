@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_intros_class_intros",
+  "info": {
+    "displayName": "Class Intro",
+    "icon": "quote"
+  },
+  "options": {},
+  "attributes": {
+    "questions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.text-segment"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_intros_texts",
+  "info": {
+    "displayName": "Main Text",
+    "icon": "feather"
+  },
+  "options": {},
+  "attributes": {
+    "intro_quote": {
+      "type": "text"
+    },
+    "quote_attribution": {
+      "type": "string"
+    },
+    "question": {
+      "type": "string"
+    },
+    "paragraphs": {
+      "type": "blocks"
+    },
+    "second_question": {
+      "type": "string"
+    },
+    "answer_paragraph": {
+      "type": "blocks"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
