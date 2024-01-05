@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "timetables",
+  "info": {
+    "singularName": "timetable",
+    "pluralName": "timetables",
+    "displayName": "Timetables",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Epsom": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.day"
+    },
+    "Cobham": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.day"
+    }
+  }
+}

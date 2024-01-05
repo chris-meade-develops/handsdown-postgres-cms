@@ -11,16 +11,18 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "@strapi/strapi": "4.15.5",
-    "@strapi/plugin-users-permissions": "4.15.5",
-    "@strapi/plugin-i18n": "4.15.5",
     "@strapi/plugin-cloud": "4.15.5",
+    "@strapi/plugin-i18n": "4.15.5",
+    "@strapi/plugin-users-permissions": "4.15.5",
+    "@strapi/provider-upload-cloudinary": "^4.15.5",
+    "@strapi/strapi": "4.15.5",
     "pg": "8.8.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
-    "styled-components": "5.3.3",
-    "strapi-plugin-populate-deep": "^3.0.1"
+    "strapi-plugin-menus": "^1.6.0",
+    "strapi-plugin-populate-deep": "^3.0.1",
+    "styled-components": "5.3.3"
   },
   "author": {
     "name": "A Strapi developer"

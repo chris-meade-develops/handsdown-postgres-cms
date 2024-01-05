@@ -27,7 +27,11 @@
         "forms.form",
         "intros.meet-the-founders",
         "intros.class-intro",
-        "cards.pricing-cards"
+        "cards.pricing-cards",
+        "intros.intro",
+        "dynamic.pricing",
+        "dynamic.locations",
+        "dynamic.schedule"
       ]
     },
     "name": {

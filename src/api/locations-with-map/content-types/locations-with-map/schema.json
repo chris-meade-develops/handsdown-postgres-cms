@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "locations_with_maps",
+  "info": {
+    "singularName": "locations-with-map",
+    "pluralName": "locations-with-maps",
+    "displayName": "Locations with map"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "locationInfo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.footer"
+    }
+  }
+}

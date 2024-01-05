@@ -1,15 +1,42 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface BasicClass extends Schema.Component {
+  collectionName: 'components_basic_classes';
+  info: {
+    displayName: 'Class';
+  };
+  attributes: {
+    name: Attribute.String;
+    startTime: Attribute.Decimal;
+    endTime: Attribute.Decimal;
+  };
+}
+
+export interface BasicDay extends Schema.Component {
+  collectionName: 'components_basic_days';
+  info: {
+    displayName: 'Day';
+    description: '';
+  };
+  attributes: {
+    dayName: Attribute.String;
+    classes: Attribute.Component<'basic.class', true>;
+  };
+}
+
 export interface BasicFooter extends Schema.Component {
   collectionName: 'components_basic_footers';
   info: {
-    displayName: 'Footer';
+    displayName: 'Location';
     icon: 'calendar';
+    description: '';
   };
   attributes: {
     location: Attribute.String;
     address: Attribute.Text;
     telephone: Attribute.String;
+    description: Attribute.Text;
+    coords: Attribute.JSON;
   };
 }
 
@@ -154,6 +181,54 @@ export interface DynamicFaqs extends Schema.Component {
   };
 }
 
+export interface DynamicFooter extends Schema.Component {
+  collectionName: 'components_dynamic_footers';
+  info: {
+    displayName: 'Footer';
+  };
+  attributes: {
+    Locations: Attribute.Component<'basic.footer', true>;
+    quickLinks: Attribute.Component<'basic.link', true>;
+    image: Attribute.Media;
+  };
+}
+
+export interface DynamicLocations extends Schema.Component {
+  collectionName: 'components_dynamic_locations';
+  info: {
+    displayName: 'Locations';
+    icon: 'pinMap';
+  };
+  attributes: {
+    dataType: Attribute.String;
+  };
+}
+
+export interface DynamicPricing extends Schema.Component {
+  collectionName: 'components_dynamic_pricings';
+  info: {
+    displayName: 'Pricing';
+  };
+  attributes: {
+    title: Attribute.String;
+    backgroundImage: Attribute.Media;
+    subTitle: Attribute.Text;
+    pricingCards: Attribute.Component<'cards.card-call-to-action', true>;
+    link: Attribute.Component<'basic.link'>;
+  };
+}
+
+export interface DynamicSchedule extends Schema.Component {
+  collectionName: 'components_dynamic_schedules';
+  info: {
+    displayName: 'Schedule';
+    description: '';
+  };
+  attributes: {
+    dataType: Attribute.String;
+  };
+}
+
 export interface DynamicSocial extends Schema.Component {
   collectionName: 'components_dynamic_socials';
   info: {
@@ -220,6 +295,18 @@ export interface IntrosFounder extends Schema.Component {
   };
 }
 
+export interface IntrosIntro extends Schema.Component {
+  collectionName: 'components_intros_intros';
+  info: {
+    displayName: 'Intro';
+  };
+  attributes: {
+    text: Attribute.RichText;
+    link: Attribute.Component<'basic.link'>;
+    title: Attribute.String;
+  };
+}
+
 export interface IntrosMainText extends Schema.Component {
   collectionName: 'components_intros_texts';
   info: {
@@ -256,6 +343,8 @@ export interface IntrosMeetTheFounders extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'basic.class': BasicClass;
+      'basic.day': BasicDay;
       'basic.footer': BasicFooter;
       'basic.image': BasicImage;
       'basic.link': BasicLink;
@@ -267,11 +356,16 @@ declare module '@strapi/types' {
       'cards.pricing-cards': CardsPricingCards;
       'dynamic.carousel': DynamicCarousel;
       'dynamic.faqs': DynamicFaqs;
+      'dynamic.footer': DynamicFooter;
+      'dynamic.locations': DynamicLocations;
+      'dynamic.pricing': DynamicPricing;
+      'dynamic.schedule': DynamicSchedule;
       'dynamic.social': DynamicSocial;
       'forms.form-input': FormsFormInput;
       'forms.form': FormsForm;
       'intros.class-intro': IntrosClassIntro;
       'intros.founder': IntrosFounder;
+      'intros.intro': IntrosIntro;
       'intros.main-text': IntrosMainText;
       'intros.meet-the-founders': IntrosMeetTheFounders;
     }

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_intros_intros",
+  "info": {
+    "displayName": "Intro"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.link"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

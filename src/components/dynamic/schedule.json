@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_dynamic_schedules",
+  "info": {
+    "displayName": "Schedule",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "dataType": {
+      "type": "string"
+    }
+  }
+}

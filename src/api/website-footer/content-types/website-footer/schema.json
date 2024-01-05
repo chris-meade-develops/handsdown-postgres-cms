@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "website_footer",
+  "info": {
+    "singularName": "website-footer",
+    "pluralName": "website-footers",
+    "displayName": "Website Footer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "dynamic.footer"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_dynamic_footers",
+  "info": {
+    "displayName": "Footer"
+  },
+  "options": {},
+  "attributes": {
+    "Locations": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.footer"
+    },
+    "quickLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.link"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

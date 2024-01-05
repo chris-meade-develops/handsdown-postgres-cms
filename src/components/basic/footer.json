@@ -1,8 +1,9 @@
 {
   "collectionName": "components_basic_footers",
   "info": {
-    "displayName": "Footer",
-    "icon": "calendar"
+    "displayName": "Location",
+    "icon": "calendar",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -14,6 +15,12 @@
     },
     "telephone": {
       "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "coords": {
+      "type": "json"
     }
   }
 }

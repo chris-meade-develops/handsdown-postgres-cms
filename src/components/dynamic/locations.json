@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_dynamic_locations",
+  "info": {
+    "displayName": "Locations",
+    "icon": "pinMap"
+  },
+  "options": {},
+  "attributes": {
+    "dataType": {
+      "type": "string"
+    }
+  }
+}
