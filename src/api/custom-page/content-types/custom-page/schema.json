@@ -31,7 +31,8 @@
         "intros.intro",
         "dynamic.pricing",
         "dynamic.locations",
-        "dynamic.schedule"
+        "dynamic.schedule",
+        "dynamic.meet-the-coaches"
       ]
     },
     "name": {

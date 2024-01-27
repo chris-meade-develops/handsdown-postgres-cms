@@ -868,7 +868,8 @@ export interface ApiCustomPageCustomPage extends Schema.CollectionType {
         'intros.intro',
         'dynamic.pricing',
         'dynamic.locations',
-        'dynamic.schedule'
+        'dynamic.schedule',
+        'dynamic.meet-the-coaches'
       ]
     >;
     name: Attribute.String;

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_dynamic_meet_the_coaches",
+  "info": {
+    "displayName": "Meet the coaches",
+    "icon": "information"
+  },
+  "options": {},
+  "attributes": {
+    "dataType": {
+      "type": "string"
+    }
+  }
+}

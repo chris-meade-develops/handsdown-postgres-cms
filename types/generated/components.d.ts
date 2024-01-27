@@ -204,6 +204,17 @@ export interface DynamicLocations extends Schema.Component {
   };
 }
 
+export interface DynamicMeetTheCoaches extends Schema.Component {
+  collectionName: 'components_dynamic_meet_the_coaches';
+  info: {
+    displayName: 'Meet the coaches';
+    icon: 'information';
+  };
+  attributes: {
+    dataType: Attribute.String;
+  };
+}
+
 export interface DynamicPricing extends Schema.Component {
   collectionName: 'components_dynamic_pricings';
   info: {
@@ -358,6 +369,7 @@ declare module '@strapi/types' {
       'dynamic.faqs': DynamicFaqs;
       'dynamic.footer': DynamicFooter;
       'dynamic.locations': DynamicLocations;
+      'dynamic.meet-the-coaches': DynamicMeetTheCoaches;
       'dynamic.pricing': DynamicPricing;
       'dynamic.schedule': DynamicSchedule;
       'dynamic.social': DynamicSocial;
