@@ -272,11 +272,12 @@ export interface FormsForm extends Schema.Component {
   info: {
     displayName: 'Form';
     icon: 'information';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
-    form_inputs: Attribute.Component<'forms.form-input', true>;
+    url: Attribute.String;
   };
 }
 
