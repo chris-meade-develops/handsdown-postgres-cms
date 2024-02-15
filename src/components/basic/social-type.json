@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_basic_social_types",
+  "info": {
+    "displayName": "SocialType"
+  },
+  "options": {},
+  "attributes": {
+    "Platform": {
+      "type": "string"
+    },
+    "Link": {
+      "type": "string"
+    }
+  }
+}

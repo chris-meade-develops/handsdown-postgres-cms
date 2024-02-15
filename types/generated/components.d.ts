@@ -78,6 +78,17 @@ export interface BasicQuestion extends Schema.Component {
   };
 }
 
+export interface BasicSocialType extends Schema.Component {
+  collectionName: 'components_basic_social_types';
+  info: {
+    displayName: 'SocialType';
+  };
+  attributes: {
+    Platform: Attribute.String;
+    Link: Attribute.String;
+  };
+}
+
 export interface BasicTextSegment extends Schema.Component {
   collectionName: 'components_basic_text_segments';
   info: {
@@ -245,10 +256,11 @@ export interface DynamicSocial extends Schema.Component {
   info: {
     displayName: 'Social';
     icon: 'volumeUp';
+    description: '';
   };
   attributes: {
-    image: Attribute.Component<'basic.image'>;
-    link: Attribute.Component<'basic.link'>;
+    Platforms: Attribute.Component<'basic.social-type', true>;
+    Title: Attribute.String;
   };
 }
 
@@ -361,6 +373,7 @@ declare module '@strapi/types' {
       'basic.image': BasicImage;
       'basic.link': BasicLink;
       'basic.question': BasicQuestion;
+      'basic.social-type': BasicSocialType;
       'basic.text-segment': BasicTextSegment;
       'cards.card-call-to-action': CardsCardCallToAction;
       'cards.card-with-image': CardsCardWithImage;

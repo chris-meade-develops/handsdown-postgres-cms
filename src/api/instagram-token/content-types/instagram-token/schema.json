@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "instagram_tokens",
+  "info": {
+    "singularName": "instagram-token",
+    "pluralName": "instagram-tokens",
+    "displayName": "InstagramToken"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userId": {
+      "type": "biginteger"
+    },
+    "accessToken": {
+      "type": "string"
+    },
+    "lastRefreshed": {
+      "type": "datetime"
+    },
+    "expiresIn": {
+      "type": "biginteger"
+    }
+  }
+}

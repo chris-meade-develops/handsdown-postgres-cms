@@ -2,19 +2,18 @@
   "collectionName": "components_dynamic_socials",
   "info": {
     "displayName": "Social",
-    "icon": "volumeUp"
+    "icon": "volumeUp",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "image": {
+    "Platforms": {
       "type": "component",
-      "repeatable": false,
-      "component": "basic.image"
+      "repeatable": true,
+      "component": "basic.social-type"
     },
-    "link": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic.link"
+    "Title": {
+      "type": "string"
     }
   }
 }

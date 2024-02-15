@@ -951,6 +951,39 @@ export interface ApiHeroHero extends Schema.CollectionType {
   };
 }
 
+export interface ApiInstagramTokenInstagramToken extends Schema.CollectionType {
+  collectionName: 'instagram_tokens';
+  info: {
+    singularName: 'instagram-token';
+    pluralName: 'instagram-tokens';
+    displayName: 'InstagramToken';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    userId: Attribute.BigInteger;
+    accessToken: Attribute.String;
+    lastRefreshed: Attribute.DateTime;
+    expiresIn: Attribute.BigInteger;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::instagram-token.instagram-token',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::instagram-token.instagram-token',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiLocationsWithMapLocationsWithMap extends Schema.SingleType {
   collectionName: 'locations_with_maps';
   info: {
@@ -1098,6 +1131,7 @@ declare module '@strapi/types' {
       'api::custom-page.custom-page': ApiCustomPageCustomPage;
       'api::graduate-list.graduate-list': ApiGraduateListGraduateList;
       'api::hero.hero': ApiHeroHero;
+      'api::instagram-token.instagram-token': ApiInstagramTokenInstagramToken;
       'api::locations-with-map.locations-with-map': ApiLocationsWithMapLocationsWithMap;
       'api::review-list.review-list': ApiReviewListReviewList;
       'api::timetable.timetable': ApiTimetableTimetable;
