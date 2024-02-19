@@ -290,6 +290,7 @@ export interface FormsForm extends Schema.Component {
     title: Attribute.String;
     description: Attribute.Text;
     url: Attribute.String;
+    academyUrls: Attribute.JSON;
   };
 }
 
