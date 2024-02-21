@@ -299,9 +299,11 @@ export interface IntrosClassIntro extends Schema.Component {
   info: {
     displayName: 'Class Intro';
     icon: 'quote';
+    description: '';
   };
   attributes: {
     questions: Attribute.Component<'basic.text-segment', true>;
+    images: Attribute.Media;
   };
 }
 
