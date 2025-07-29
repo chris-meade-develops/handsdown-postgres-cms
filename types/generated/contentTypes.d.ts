@@ -998,6 +998,40 @@ export interface ApiCustomPageCustomPage extends Schema.CollectionType {
   };
 }
 
+export interface ApiGlobalConfigGlobalConfig extends Schema.SingleType {
+  collectionName: 'global_configs';
+  info: {
+    singularName: 'global-config';
+    pluralName: 'global-configs';
+    displayName: 'Global Config';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Announcement: Attribute.Component<'dynamic.announcement-bar', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::global-config.global-config',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::global-config.global-config',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    sitemap_exclude: Attribute.Boolean &
+      Attribute.Private &
+      Attribute.DefaultTo<false>;
+  };
+}
+
 export interface ApiGraduateListGraduateList extends Schema.SingleType {
   collectionName: 'graduates_list';
   info: {
@@ -1258,6 +1292,7 @@ declare module '@strapi/types' {
       'api::class-list.class-list': ApiClassListClassList;
       'api::coach-list.coach-list': ApiCoachListCoachList;
       'api::custom-page.custom-page': ApiCustomPageCustomPage;
+      'api::global-config.global-config': ApiGlobalConfigGlobalConfig;
       'api::graduate-list.graduate-list': ApiGraduateListGraduateList;
       'api::hero.hero': ApiHeroHero;
       'api::instagram-token.instagram-token': ApiInstagramTokenInstagramToken;

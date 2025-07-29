@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_basic_sessions",
+  "info": {
+    "displayName": "Session",
+    "icon": "clock"
+  },
+  "options": {},
+  "attributes": {
+    "Date": {
+      "type": "datetime"
+    },
+    "Start": {
+      "type": "time"
+    },
+    "End": {
+      "type": "time"
+    }
+  }
+}

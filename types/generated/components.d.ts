@@ -78,6 +78,19 @@ export interface BasicQuestion extends Schema.Component {
   };
 }
 
+export interface BasicSession extends Schema.Component {
+  collectionName: 'components_basic_sessions';
+  info: {
+    displayName: 'Session';
+    icon: 'clock';
+  };
+  attributes: {
+    Date: Attribute.DateTime;
+    Start: Attribute.Time;
+    End: Attribute.Time;
+  };
+}
+
 export interface BasicSocialType extends Schema.Component {
   collectionName: 'components_basic_social_types';
   info: {
@@ -161,6 +174,24 @@ export interface CardsPricingCards extends Schema.Component {
     title: Attribute.String;
     subTitle: Attribute.String;
     link: Attribute.Component<'basic.link'>;
+  };
+}
+
+export interface DynamicAnnouncementBar extends Schema.Component {
+  collectionName: 'components_dynamic_announcement_bars';
+  info: {
+    displayName: 'Announcement-bar';
+    icon: 'clock';
+    description: '';
+  };
+  attributes: {
+    enabled: Attribute.Boolean;
+    message: Attribute.Text;
+    image: Attribute.Media;
+    link: Attribute.Component<'basic.link'>;
+    Start: Attribute.DateTime;
+    End: Attribute.DateTime;
+    session: Attribute.Component<'basic.session', true>;
   };
 }
 
@@ -376,12 +407,14 @@ declare module '@strapi/types' {
       'basic.image': BasicImage;
       'basic.link': BasicLink;
       'basic.question': BasicQuestion;
+      'basic.session': BasicSession;
       'basic.social-type': BasicSocialType;
       'basic.text-segment': BasicTextSegment;
       'cards.card-call-to-action': CardsCardCallToAction;
       'cards.card-with-image': CardsCardWithImage;
       'cards.card': CardsCard;
       'cards.pricing-cards': CardsPricingCards;
+      'dynamic.announcement-bar': DynamicAnnouncementBar;
       'dynamic.carousel': DynamicCarousel;
       'dynamic.faqs': DynamicFaqs;
       'dynamic.footer': DynamicFooter;

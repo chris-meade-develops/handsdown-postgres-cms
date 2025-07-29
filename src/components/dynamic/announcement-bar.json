@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_dynamic_announcement_bars",
+  "info": {
+    "displayName": "Announcement-bar",
+    "icon": "clock",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "enabled": {
+      "type": "boolean"
+    },
+    "message": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.link"
+    },
+    "Start": {
+      "type": "datetime"
+    },
+    "End": {
+      "type": "datetime"
+    },
+    "session": {
+      "type": "component",
+      "repeatable": true,
+      "component": "basic.session"
+    }
+  }
+}
