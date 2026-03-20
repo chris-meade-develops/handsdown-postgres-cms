@@ -1,435 +1,436 @@
-import type { Schema, Attribute } from '@strapi/strapi';
+import type { Schema, Attribute } from '@strapi/strapi'
 
 export interface BasicClass extends Schema.Component {
-  collectionName: 'components_basic_classes';
+  collectionName: 'components_basic_classes'
   info: {
-    displayName: 'Class';
-  };
+    displayName: 'Class'
+  }
   attributes: {
-    name: Attribute.String;
-    startTime: Attribute.Decimal;
-    endTime: Attribute.Decimal;
-  };
+    name: Attribute.String
+    startTime: Attribute.Decimal
+    endTime: Attribute.Decimal
+  }
 }
 
 export interface BasicDay extends Schema.Component {
-  collectionName: 'components_basic_days';
+  collectionName: 'components_basic_days'
   info: {
-    displayName: 'Day';
-    description: '';
-  };
+    displayName: 'Day'
+    description: ''
+  }
   attributes: {
-    dayName: Attribute.String;
-    classes: Attribute.Component<'basic.class', true>;
-  };
+    dayName: Attribute.String
+    classes: Attribute.Component<'basic.class', true>
+    coming_soon: Attribute.Boolean
+  }
 }
 
 export interface BasicFooter extends Schema.Component {
-  collectionName: 'components_basic_footers';
+  collectionName: 'components_basic_footers'
   info: {
-    displayName: 'Location';
-    icon: 'calendar';
-    description: '';
-  };
+    displayName: 'Location'
+    icon: 'calendar'
+    description: ''
+  }
   attributes: {
-    location: Attribute.String;
-    address: Attribute.Text;
-    telephone: Attribute.String;
-    description: Attribute.Text;
-    coords: Attribute.JSON;
-  };
+    location: Attribute.String
+    address: Attribute.Text
+    telephone: Attribute.String
+    description: Attribute.Text
+    coords: Attribute.JSON
+  }
 }
 
 export interface BasicImage extends Schema.Component {
-  collectionName: 'components_basic_images';
+  collectionName: 'components_basic_images'
   info: {
-    displayName: 'Image';
-    icon: 'picture';
-  };
+    displayName: 'Image'
+    icon: 'picture'
+  }
   attributes: {
-    src: Attribute.Media;
-    alt: Attribute.String;
-  };
+    src: Attribute.Media
+    alt: Attribute.String
+  }
 }
 
 export interface BasicLink extends Schema.Component {
-  collectionName: 'components_basic_links';
+  collectionName: 'components_basic_links'
   info: {
-    displayName: 'Link';
-    icon: 'link';
-  };
+    displayName: 'Link'
+    icon: 'link'
+  }
   attributes: {
-    text: Attribute.String;
-    address: Attribute.String;
-  };
+    text: Attribute.String
+    address: Attribute.String
+  }
 }
 
 export interface BasicQuestion extends Schema.Component {
-  collectionName: 'components_basic_question';
+  collectionName: 'components_basic_question'
   info: {
-    displayName: 'Question';
-    icon: 'question';
-    description: '';
-  };
+    displayName: 'Question'
+    icon: 'question'
+    description: ''
+  }
   attributes: {
-    question: Attribute.Text;
-    answer: Attribute.Text;
-    link: Attribute.Component<'basic.link'>;
-  };
+    question: Attribute.Text
+    answer: Attribute.Text
+    link: Attribute.Component<'basic.link'>
+  }
 }
 
 export interface BasicSession extends Schema.Component {
-  collectionName: 'components_basic_sessions';
+  collectionName: 'components_basic_sessions'
   info: {
-    displayName: 'Session';
-    icon: 'clock';
-  };
+    displayName: 'Session'
+    icon: 'clock'
+  }
   attributes: {
-    Date: Attribute.DateTime;
-    Start: Attribute.Time;
-    End: Attribute.Time;
-  };
+    Date: Attribute.DateTime
+    Start: Attribute.Time
+    End: Attribute.Time
+  }
 }
 
 export interface BasicSocialType extends Schema.Component {
-  collectionName: 'components_basic_social_types';
+  collectionName: 'components_basic_social_types'
   info: {
-    displayName: 'SocialType';
-  };
+    displayName: 'SocialType'
+  }
   attributes: {
-    Platform: Attribute.String;
-    Link: Attribute.String;
-  };
+    Platform: Attribute.String
+    Link: Attribute.String
+  }
 }
 
 export interface BasicTextSegment extends Schema.Component {
-  collectionName: 'components_basic_text_segments';
+  collectionName: 'components_basic_text_segments'
   info: {
-    displayName: 'Text Segment';
-    icon: 'pencil';
-  };
+    displayName: 'Text Segment'
+    icon: 'pencil'
+  }
   attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-  };
+    title: Attribute.String
+    description: Attribute.Text
+  }
 }
 
 export interface CardsCardCallToAction extends Schema.Component {
-  collectionName: 'components_cards_card_call_to_actions';
+  collectionName: 'components_cards_card_call_to_actions'
   info: {
-    displayName: 'card call to action';
-  };
+    displayName: 'card call to action'
+  }
   attributes: {
-    title: Attribute.String;
-    subTitle: Attribute.String;
-    description: Attribute.Text;
-    highlight: Attribute.Boolean;
-    action: Attribute.String;
-    footer: Attribute.String;
-    link: Attribute.Component<'basic.link'>;
-  };
+    title: Attribute.String
+    subTitle: Attribute.String
+    description: Attribute.Text
+    highlight: Attribute.Boolean
+    action: Attribute.String
+    footer: Attribute.String
+    link: Attribute.Component<'basic.link'>
+  }
 }
 
 export interface CardsCardWithImage extends Schema.Component {
-  collectionName: 'components_cards_card_with_images';
+  collectionName: 'components_cards_card_with_images'
   info: {
-    displayName: 'Card with image';
-    icon: 'apps';
-    description: '';
-  };
+    displayName: 'Card with image'
+    icon: 'apps'
+    description: ''
+  }
   attributes: {
-    title: Attribute.String;
-    subtitle: Attribute.String;
-    description: Attribute.Text;
-    imgPosition: Attribute.String;
-    reverse: Attribute.Boolean & Attribute.DefaultTo<false>;
-    image: Attribute.Component<'basic.image'>;
-    link: Attribute.Component<'basic.link'>;
-  };
+    title: Attribute.String
+    subtitle: Attribute.String
+    description: Attribute.Text
+    imgPosition: Attribute.String
+    reverse: Attribute.Boolean & Attribute.DefaultTo<false>
+    image: Attribute.Component<'basic.image'>
+    link: Attribute.Component<'basic.link'>
+  }
 }
 
 export interface CardsCard extends Schema.Component {
-  collectionName: 'components_cards_cards';
+  collectionName: 'components_cards_cards'
   info: {
-    displayName: 'Card';
-    icon: 'apps';
-    description: '';
-  };
+    displayName: 'Card'
+    icon: 'apps'
+    description: ''
+  }
   attributes: {
-    title: Attribute.String;
-    subtitle: Attribute.String;
-    description: Attribute.Text;
-    link: Attribute.Component<'basic.link', true>;
-  };
+    title: Attribute.String
+    subtitle: Attribute.String
+    description: Attribute.Text
+    link: Attribute.Component<'basic.link', true>
+  }
 }
 
 export interface CardsPricingCards extends Schema.Component {
-  collectionName: 'components_cards_pricing_cards';
+  collectionName: 'components_cards_pricing_cards'
   info: {
-    displayName: 'Pricing Cards';
-    icon: 'database';
-  };
+    displayName: 'Pricing Cards'
+    icon: 'database'
+  }
   attributes: {
-    cards: Attribute.Component<'cards.card-call-to-action', true>;
-    title: Attribute.String;
-    subTitle: Attribute.String;
-    link: Attribute.Component<'basic.link'>;
-  };
+    cards: Attribute.Component<'cards.card-call-to-action', true>
+    title: Attribute.String
+    subTitle: Attribute.String
+    link: Attribute.Component<'basic.link'>
+  }
 }
 
 export interface DynamicAnnouncementBar extends Schema.Component {
-  collectionName: 'components_dynamic_announcement_bars';
+  collectionName: 'components_dynamic_announcement_bars'
   info: {
-    displayName: 'Announcement-bar';
-    icon: 'clock';
-    description: '';
-  };
+    displayName: 'Announcement-bar'
+    icon: 'clock'
+    description: ''
+  }
   attributes: {
-    enabled: Attribute.Boolean;
-    message: Attribute.Text;
-    image: Attribute.Media;
-    link: Attribute.Component<'basic.link'>;
-    Start: Attribute.DateTime;
-    End: Attribute.DateTime;
-    session: Attribute.Component<'basic.session', true>;
-  };
+    enabled: Attribute.Boolean
+    message: Attribute.Text
+    image: Attribute.Media
+    link: Attribute.Component<'basic.link'>
+    Start: Attribute.DateTime
+    End: Attribute.DateTime
+    session: Attribute.Component<'basic.session', true>
+  }
 }
 
 export interface DynamicCarousel extends Schema.Component {
-  collectionName: 'components_dynamic_carousels';
+  collectionName: 'components_dynamic_carousels'
   info: {
-    displayName: 'Carousel';
-    icon: 'play';
-  };
+    displayName: 'Carousel'
+    icon: 'play'
+  }
   attributes: {
-    displayButtons: Attribute.Boolean & Attribute.DefaultTo<false>;
-    displayDots: Attribute.Boolean & Attribute.DefaultTo<false>;
-    selectableChildren: Attribute.Boolean & Attribute.DefaultTo<false>;
-    reverseColours: Attribute.Boolean & Attribute.DefaultTo<false>;
-    cards: Attribute.Component<'cards.card-with-image', true>;
-    dataType: Attribute.String & Attribute.DefaultTo<'carousel'>;
-  };
+    displayButtons: Attribute.Boolean & Attribute.DefaultTo<false>
+    displayDots: Attribute.Boolean & Attribute.DefaultTo<false>
+    selectableChildren: Attribute.Boolean & Attribute.DefaultTo<false>
+    reverseColours: Attribute.Boolean & Attribute.DefaultTo<false>
+    cards: Attribute.Component<'cards.card-with-image', true>
+    dataType: Attribute.String & Attribute.DefaultTo<'carousel'>
+  }
 }
 
 export interface DynamicFaqs extends Schema.Component {
-  collectionName: 'components_dynamic_faqs';
+  collectionName: 'components_dynamic_faqs'
   info: {
-    displayName: 'Faqs';
-    icon: 'question';
-  };
+    displayName: 'Faqs'
+    icon: 'question'
+  }
   attributes: {
-    questions: Attribute.Component<'basic.question', true>;
-    image: Attribute.Component<'basic.image'>;
-  };
+    questions: Attribute.Component<'basic.question', true>
+    image: Attribute.Component<'basic.image'>
+  }
 }
 
 export interface DynamicFooter extends Schema.Component {
-  collectionName: 'components_dynamic_footers';
+  collectionName: 'components_dynamic_footers'
   info: {
-    displayName: 'Footer';
-  };
+    displayName: 'Footer'
+  }
   attributes: {
-    Locations: Attribute.Component<'basic.footer', true>;
-    quickLinks: Attribute.Component<'basic.link', true>;
-    image: Attribute.Media;
-  };
+    Locations: Attribute.Component<'basic.footer', true>
+    quickLinks: Attribute.Component<'basic.link', true>
+    image: Attribute.Media
+  }
 }
 
 export interface DynamicLocations extends Schema.Component {
-  collectionName: 'components_dynamic_locations';
+  collectionName: 'components_dynamic_locations'
   info: {
-    displayName: 'Locations';
-    icon: 'pinMap';
-  };
+    displayName: 'Locations'
+    icon: 'pinMap'
+  }
   attributes: {
-    dataType: Attribute.String;
-  };
+    dataType: Attribute.String
+  }
 }
 
 export interface DynamicMeetTheCoaches extends Schema.Component {
-  collectionName: 'components_dynamic_meet_the_coaches';
+  collectionName: 'components_dynamic_meet_the_coaches'
   info: {
-    displayName: 'Meet the coaches';
-    icon: 'information';
-  };
+    displayName: 'Meet the coaches'
+    icon: 'information'
+  }
   attributes: {
-    dataType: Attribute.String;
-  };
+    dataType: Attribute.String
+  }
 }
 
 export interface DynamicPricing extends Schema.Component {
-  collectionName: 'components_dynamic_pricings';
+  collectionName: 'components_dynamic_pricings'
   info: {
-    displayName: 'Pricing';
-  };
+    displayName: 'Pricing'
+  }
   attributes: {
-    title: Attribute.String;
-    backgroundImage: Attribute.Media;
-    subTitle: Attribute.Text;
-    pricingCards: Attribute.Component<'cards.card-call-to-action', true>;
-    link: Attribute.Component<'basic.link'>;
-  };
+    title: Attribute.String
+    backgroundImage: Attribute.Media
+    subTitle: Attribute.Text
+    pricingCards: Attribute.Component<'cards.card-call-to-action', true>
+    link: Attribute.Component<'basic.link'>
+  }
 }
 
 export interface DynamicSchedule extends Schema.Component {
-  collectionName: 'components_dynamic_schedules';
+  collectionName: 'components_dynamic_schedules'
   info: {
-    displayName: 'Schedule';
-    description: '';
-  };
+    displayName: 'Schedule'
+    description: ''
+  }
   attributes: {
-    dataType: Attribute.String;
-  };
+    dataType: Attribute.String
+  }
 }
 
 export interface DynamicSocial extends Schema.Component {
-  collectionName: 'components_dynamic_socials';
+  collectionName: 'components_dynamic_socials'
   info: {
-    displayName: 'Social';
-    icon: 'volumeUp';
-    description: '';
-  };
+    displayName: 'Social'
+    icon: 'volumeUp'
+    description: ''
+  }
   attributes: {
-    Platforms: Attribute.Component<'basic.social-type', true>;
-    Title: Attribute.String;
-  };
+    Platforms: Attribute.Component<'basic.social-type', true>
+    Title: Attribute.String
+  }
 }
 
 export interface FormsFormInput extends Schema.Component {
-  collectionName: 'components_forms_form_inputs';
+  collectionName: 'components_forms_form_inputs'
   info: {
-    displayName: 'Form Input';
-    icon: 'information';
-  };
+    displayName: 'Form Input'
+    icon: 'information'
+  }
   attributes: {
-    label: Attribute.String;
-    name: Attribute.String;
-    placeholder: Attribute.String;
-    input_type: Attribute.String;
-    element_type: Attribute.String;
-  };
+    label: Attribute.String
+    name: Attribute.String
+    placeholder: Attribute.String
+    input_type: Attribute.String
+    element_type: Attribute.String
+  }
 }
 
 export interface FormsForm extends Schema.Component {
-  collectionName: 'components_forms_forms';
+  collectionName: 'components_forms_forms'
   info: {
-    displayName: 'Form';
-    icon: 'information';
-    description: '';
-  };
+    displayName: 'Form'
+    icon: 'information'
+    description: ''
+  }
   attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    url: Attribute.String;
-    academyUrls: Attribute.JSON;
-  };
+    title: Attribute.String
+    description: Attribute.Text
+    url: Attribute.String
+    academyUrls: Attribute.JSON
+  }
 }
 
 export interface IntrosClassIntro extends Schema.Component {
-  collectionName: 'components_intros_class_intros';
+  collectionName: 'components_intros_class_intros'
   info: {
-    displayName: 'Class Intro';
-    icon: 'quote';
-    description: '';
-  };
+    displayName: 'Class Intro'
+    icon: 'quote'
+    description: ''
+  }
   attributes: {
-    questions: Attribute.Component<'basic.text-segment', true>;
-    images: Attribute.Media;
-  };
+    questions: Attribute.Component<'basic.text-segment', true>
+    images: Attribute.Media
+  }
 }
 
 export interface IntrosFounder extends Schema.Component {
-  collectionName: 'components_intros_founders';
+  collectionName: 'components_intros_founders'
   info: {
-    displayName: 'Founder';
-    icon: 'user';
-    description: '';
-  };
+    displayName: 'Founder'
+    icon: 'user'
+    description: ''
+  }
   attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    link: Attribute.Component<'basic.link'>;
-    image: Attribute.Media;
-  };
+    title: Attribute.String
+    description: Attribute.Text
+    link: Attribute.Component<'basic.link'>
+    image: Attribute.Media
+  }
 }
 
 export interface IntrosIntro extends Schema.Component {
-  collectionName: 'components_intros_intros';
+  collectionName: 'components_intros_intros'
   info: {
-    displayName: 'Intro';
-  };
+    displayName: 'Intro'
+  }
   attributes: {
-    text: Attribute.RichText;
-    link: Attribute.Component<'basic.link'>;
-    title: Attribute.String;
-  };
+    text: Attribute.RichText
+    link: Attribute.Component<'basic.link'>
+    title: Attribute.String
+  }
 }
 
 export interface IntrosMainText extends Schema.Component {
-  collectionName: 'components_intros_texts';
+  collectionName: 'components_intros_texts'
   info: {
-    displayName: 'Main Text';
-    icon: 'feather';
-  };
+    displayName: 'Main Text'
+    icon: 'feather'
+  }
   attributes: {
-    intro_quote: Attribute.Text;
-    quote_attribution: Attribute.String;
-    question: Attribute.String;
-    paragraphs: Attribute.Blocks;
-    second_question: Attribute.String;
-    answer_paragraph: Attribute.Blocks;
-    images: Attribute.Media;
-  };
+    intro_quote: Attribute.Text
+    quote_attribution: Attribute.String
+    question: Attribute.String
+    paragraphs: Attribute.Blocks
+    second_question: Attribute.String
+    answer_paragraph: Attribute.Blocks
+    images: Attribute.Media
+  }
 }
 
 export interface IntrosMeetTheFounders extends Schema.Component {
-  collectionName: 'components_intros_meet_the_founders';
+  collectionName: 'components_intros_meet_the_founders'
   info: {
-    displayName: 'Meet the founders';
-    icon: 'feather';
-  };
+    displayName: 'Meet the founders'
+    icon: 'feather'
+  }
   attributes: {
-    Title: Attribute.String;
+    Title: Attribute.String
     Founders: Attribute.Component<'intros.founder', true> &
       Attribute.SetMinMax<{
-        min: 2;
-        max: 2;
-      }>;
-  };
+        min: 2
+        max: 2
+      }>
+  }
 }
 
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'basic.class': BasicClass;
-      'basic.day': BasicDay;
-      'basic.footer': BasicFooter;
-      'basic.image': BasicImage;
-      'basic.link': BasicLink;
-      'basic.question': BasicQuestion;
-      'basic.session': BasicSession;
-      'basic.social-type': BasicSocialType;
-      'basic.text-segment': BasicTextSegment;
-      'cards.card-call-to-action': CardsCardCallToAction;
-      'cards.card-with-image': CardsCardWithImage;
-      'cards.card': CardsCard;
-      'cards.pricing-cards': CardsPricingCards;
-      'dynamic.announcement-bar': DynamicAnnouncementBar;
-      'dynamic.carousel': DynamicCarousel;
-      'dynamic.faqs': DynamicFaqs;
-      'dynamic.footer': DynamicFooter;
-      'dynamic.locations': DynamicLocations;
-      'dynamic.meet-the-coaches': DynamicMeetTheCoaches;
-      'dynamic.pricing': DynamicPricing;
-      'dynamic.schedule': DynamicSchedule;
-      'dynamic.social': DynamicSocial;
-      'forms.form-input': FormsFormInput;
-      'forms.form': FormsForm;
-      'intros.class-intro': IntrosClassIntro;
-      'intros.founder': IntrosFounder;
-      'intros.intro': IntrosIntro;
-      'intros.main-text': IntrosMainText;
-      'intros.meet-the-founders': IntrosMeetTheFounders;
+      'basic.class': BasicClass
+      'basic.day': BasicDay
+      'basic.footer': BasicFooter
+      'basic.image': BasicImage
+      'basic.link': BasicLink
+      'basic.question': BasicQuestion
+      'basic.session': BasicSession
+      'basic.social-type': BasicSocialType
+      'basic.text-segment': BasicTextSegment
+      'cards.card-call-to-action': CardsCardCallToAction
+      'cards.card-with-image': CardsCardWithImage
+      'cards.card': CardsCard
+      'cards.pricing-cards': CardsPricingCards
+      'dynamic.announcement-bar': DynamicAnnouncementBar
+      'dynamic.carousel': DynamicCarousel
+      'dynamic.faqs': DynamicFaqs
+      'dynamic.footer': DynamicFooter
+      'dynamic.locations': DynamicLocations
+      'dynamic.meet-the-coaches': DynamicMeetTheCoaches
+      'dynamic.pricing': DynamicPricing
+      'dynamic.schedule': DynamicSchedule
+      'dynamic.social': DynamicSocial
+      'forms.form-input': FormsFormInput
+      'forms.form': FormsForm
+      'intros.class-intro': IntrosClassIntro
+      'intros.founder': IntrosFounder
+      'intros.intro': IntrosIntro
+      'intros.main-text': IntrosMainText
+      'intros.meet-the-founders': IntrosMeetTheFounders
     }
   }
 }
